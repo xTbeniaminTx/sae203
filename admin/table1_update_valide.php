@@ -22,7 +22,7 @@
 	$proprio=$_POST['proprio'];
 	$num=$_POST['num'];
 
-	$mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', 'MonSuperMotDePasse1');
+	$mabd = new PDO('mysql:host=db;dbname=sae203Base;charset=UTF8;', 'sae203User', 'MonSuperMotDePasse1');
 	$mabd->query('SET NAMES utf8;');
 
 	$imageName=$_FILES["photo"]["name"];
@@ -58,12 +58,12 @@
 	
 				$req = "UPDATE chats
 				SET chat_nom = '".$nom."', chat_age = '".$age."', chat_race = '".$race."', chat_genre = '".$genre."', chat_date = '".$date."', chat_photo = '".$photo."', chat_poids = '".$poids."' , _proprio_id = '".$proprio."'
-			    WHERE proprio_id='".$num."';"
+				WHERE proprio_id='".$num."';";
 			}
 		else{
 			$req = "UPDATE chats
 			SET chat_nom = '".$nom."', chat_age = '".$age."', chat_race = '".$race."', chat_genre = '".$genre."', chat_date = '".$date."', chat_poids = '".$poids."' , _proprio_id = '".$proprio."'
-			WHERE proprio_id='".$num"';"
+			WHERE proprio_id='".$num."';";
 			}
 
 			echo 'juste pour le debug'.$req;

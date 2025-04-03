@@ -19,7 +19,7 @@
     propriétaire:
         <select name="proprio">
                 <?php
-                $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', 'MonSuperMotDePasse1');
+                $mabd = new PDO('mysql:host=db;dbname=sae203Base;charset=UTF8;', 'sae203User', 'MonSuperMotDePasse1');
                 $mabd->query('SET NAMES utf8;');
                 $req = "SELECT proprio_nom, proprio_prenom, proprio_id FROM proprietaires ";
                 $resultat = $mabd->query($req);

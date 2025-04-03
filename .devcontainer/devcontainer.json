@@ -1,0 +1,20 @@
+{
+    "name": "SAE203 Codespace",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "php",
+    "workspaceFolder": "/var/www/html",
+    "forwardPorts": [8080, 8081],
+    "portsAttributes": {
+      "8080": { "label": "Site SAE203", "onAutoForward": "openBrowser" },
+      "8081": { "label": "phpMyAdmin", "onAutoForward": "openBrowser" }
+    },
+    "postCreateCommand": "docker-php-ext-install pdo pdo_mysql mysqli && docker-php-ext-enable pdo_mysql && docker-compose up -d",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-azuretools.vscode-docker",
+          "xdebug.php-debug"
+        ]
+      }
+    }
+  }

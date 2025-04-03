@@ -9,7 +9,7 @@
 // recupérer dans l'url l'id de l'album à supprimer
 $num=$_GET['num'];
 
-$mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', 'MonSuperMotDePasse1');
+$mabd = new PDO('mysql:host=db;dbname=sae203Base;charset=UTF8;', 'sae203User', 'MonSuperMotDePasse1');
 $mabd->query('SET NAMES utf8;');
 
 $req = 'DELETE from chats WHERE chat_id='.$num; 

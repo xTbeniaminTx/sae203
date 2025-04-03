@@ -9,7 +9,7 @@
 <h1>nos albums</h1>
 <hr>
 <?php
-$mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', 'MonSuperMotDePasse1');
+$mabd = new PDO('mysql:host=db;dbname=sae203Base;charset=UTF8;', 'sae203User', 'MonSuperMotDePasse1');
 $mabd->query('SET NAMES utf8;');
 $req = "SELECT * FROM chats INNER JOIN proprietaires ON chats._proprio_id = proprietaires.proprio_id";
 $resultat = $mabd->query($req);

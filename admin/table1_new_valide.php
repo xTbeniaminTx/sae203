@@ -17,7 +17,7 @@
 	$genre=$_POST['genre'];
 	$proprio=$_POST['proprio'];
 	
-	$mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', 'MonSuperMotDePasse1');
+	$mabd = new PDO('mysql:host=db;dbname=sae203Base;charset=UTF8;', 'sae203User', 'MonSuperMotDePasse1');
 	$mabd->query('SET NAMES utf8;');
 	
 				//vérification du format de l'image téléchargée
@@ -54,7 +54,3 @@
 </table>
 </body>
 </html>
-
-
-
-

@@ -17,7 +17,7 @@
 	</thead>
 	<tbody>
 <?php
-$mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', 'MonSuperMotDePasse1');
+$mabd = new PDO('mysql:host=db;dbname=sae203Base;charset=UTF8;', 'sae203User', 'MonSuperMotDePasse1');
 $mabd->query('SET NAMES utf8;');
 $req = "SELECT * FROM chats";
 $resultat = $mabd->query($req);
