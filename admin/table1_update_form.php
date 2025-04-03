@@ -52,7 +52,7 @@
         $resultat = $mabd->query($req);
         foreach ($resultat as $value) {
             $selection = ($album['_proprio_id'] == $value['proprio_id']) ? "selected" : "";
-            echo '<option ' . $selection . ' value="' . $value['proprio_id'] . '"> ' . $value['proprio_nom'] . '</option>';
+            echo '<option ' . $selection . ' value="' . $value['proprio_id'] . '"> ' . $value['proprio_nom'] . ' ' . $value['proprio_prenom'] . '</option>';
         }
         ?>
     </select>
