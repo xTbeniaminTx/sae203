@@ -13,6 +13,7 @@ include ('header.php');
 <a href="admin/admin.php">Privé</a>
 <a href="form_recherche.php">Recherche</a>
 <?php
+phpinfo();
 include ('footer.php');
 ?>
 
